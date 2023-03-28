@@ -9,12 +9,17 @@ export class ShoppingListService {
         new Ingredient('Tomatoes', 10),
       ];
 
-      getIngredients() {
+      getIngredients() { 
         return [...this.ingredients];
       }
 
       addIngredient(ingredient: Ingredient) {
         this.ingredients.push(ingredient);
+        this.ingredientsChanged.emit([...this.ingredients]);
+      }
+
+      addIngredients(ingredients: Ingredient[]) {
+        this.ingredients.push(...ingredients);
         this.ingredientsChanged.emit([...this.ingredients]);
       }
 }

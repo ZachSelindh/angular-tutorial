@@ -25,7 +25,7 @@ export class RecipeService {
             new Ingredient('Bread', 2),
             new Ingredient('Cheese', 1),
     ]),
-      ];
+      ];     
 
     constructor(private slService: ShoppingListService) {}
 
